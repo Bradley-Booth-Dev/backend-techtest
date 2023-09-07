@@ -91,7 +91,6 @@ if exports_response.status_code == 201:
 
             # If url returns 200 export the data and store it in a postgres table
             if export_data_response.status_code == 200:
-                print("Export status:", export_status_data["status"])
                 export_data = export_data_response.json()
 
                 cur.execute("""
